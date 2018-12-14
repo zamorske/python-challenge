@@ -37,27 +37,57 @@ import os
 # Module for reading CSV files
 import csv
 
-csvpath = os.path.join('..', 'Resources', 'budget_data.csv')
+csvpath = os.path.join( 'Resources', 'budget_data.csv')
 
 # with open(csvpath, 'r') as file_handler:
-#    PyBank = file_handler.read()
-# # print(PyBank)
+#         PyBank = file_handler.read()
+# print(PyBank)
 # # print(type(PyBank))
 
 ######################################################
-#   The total number of months included in the dataset
+
+# #   The total number of months included in the dataset
 total_months = 0
-with open('budget_data.csv') as csvfile:
+with open(csvpath) as csvfile:
     PyBank = csv.DictReader(csvfile)
+#    PyBank = {"Date": "Jan-2010", "Profit/Losses": 867884}
     for row in PyBank:
-#       print(row['Date'], row['Profit/Losses'])
         total_months = total_months + 1
     print("The total months is " + str(total_months))
-#"The total months is" 
+#    print(Pybank.keys)
+
 ##############################################################
-
-
 #   The total net amount of "Profit/Losses" over the entire period
-total_P_L = 0
-        total_P_L = PyBank{'Profit/Losses'} + total_P_L
-    print(total_P_L)
+
+#total_P_L = 0
+#   PyBank = {"Date": "Jan-2010", "Profit/Losses": 867884}
+#    print(Pybank.keys)
+    for Profit/Losses in PyBank():
+        total_P_L = sum(int(Profit/Losses) + int(total_P_L))
+#     print(f''total_P_L)
+
+##############
+#   The average change in "Profit/Losses" between months over the entire period
+# avareage_change = 0
+# con_months = []
+# for x in range
+#     for change in Profit/Losses:
+
+# #   The greatest increase in profits (date and amount) over the entire period
+# Max_inc = 0
+# if 
+# #   The greatest decrease in losses (date and amount) over the entire period
+# Max_dec = 0
+
+# #   ```format the data
+print("FIinancial Analysis")
+print('----------------------------')
+# #   Total Months: 86
+#    print("The total months is " + str(total_months))
+# #   Total: $38382578
+# #   Average  Change: $-2315.12
+# #   Greatest Increase in Profits: Feb-2012 ($1926159)
+# #   Greatest Decrease in Profits: Sep-2013 ($-2196167)
+# #   ```
+
+
